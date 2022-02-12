@@ -12,6 +12,7 @@ public class Controlador2 {
     @GetMapping("/controlador2/getPersona")
     Person getControlador2()
     {
-        return new Person(p.getNombre(),p.getPoblacion(),p.getEdad()*2);
+        Person p2 = p.getPerson();
+        return new Person(p2.getNombre(),p2.getPoblacion(),p2.getEdad()*2);
     }
 }

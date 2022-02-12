@@ -10,10 +10,10 @@ public class Controlador1 {
 
     @Autowired PersonServiceImp p;
 
-    @GetMapping("/controlador1/useradd")
+    @GetMapping("/controlador1/addPersona")
     public Person addPerson(@RequestHeader String nombre, @RequestHeader String poblacion, @RequestHeader int edad)
     {
-        p.setPerson(nombre,poblacion,edad);
-        return new Person(nombre,poblacion,edad);
+        p.setPerson(new Person(nombre,poblacion,edad));
+        return p.getPerson();
     }
 }
