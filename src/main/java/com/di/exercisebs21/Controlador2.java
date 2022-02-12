@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controlador2 {
 
-    @Autowired PersonServiceImp p;
+    @Autowired PersonService p;
 
     @GetMapping("/controlador2/getPersona")
-    Person getControlador2()
+    Person getPersona()
     {
-        Person p2 = p.getPerson();
-        return new Person(p2.getNombre(),p2.getPoblacion(),p2.getEdad()*2);
+        return new Person(p.getNombre(),p.getPoblacion(),p.getEdad()*2);
     }
 }

@@ -7,7 +7,11 @@ public class PersonServiceImp implements PersonService
 {
     Person p = new Person();
 
-    public void setPerson(Person p) { this.p = p; }
+    public void setNombre(String nombre) { p.setNombre(nombre); }
+    public void setPoblacion(String poblacion) { p.setPoblacion(poblacion); }
+    public void setEdad(int edad) { p.setEdad(edad); }
 
-    public Person getPerson() { return p; }
+    public String getNombre() { return p.getNombre(); }
+    public String getPoblacion() { return p.getPoblacion(); }
+    public int getEdad() { return p.getEdad(); }
 }

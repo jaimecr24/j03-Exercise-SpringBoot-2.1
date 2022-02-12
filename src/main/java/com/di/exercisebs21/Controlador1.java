@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controlador1 {
 
-    @Autowired PersonServiceImp p;
+    @Autowired PersonService p;
 
     @GetMapping("/controlador1/addPersona")
-    public Person addPerson(@RequestHeader String nombre, @RequestHeader String poblacion, @RequestHeader int edad)
+    public Object addPersona(@RequestHeader String nombre, @RequestHeader String poblacion, @RequestHeader int edad)
     {
-        p.setPerson(new Person(nombre,poblacion,edad));
-        return p.getPerson();
+        p.setNombre(nombre);
+        p.setPoblacion(poblacion);
+        p.setEdad(edad);
+
+        return new Person(nombre,poblacion,edad);
     }
 }

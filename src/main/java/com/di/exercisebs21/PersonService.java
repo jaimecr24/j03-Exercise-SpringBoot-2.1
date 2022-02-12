@@ -2,6 +2,10 @@ package com.di.exercisebs21;
 
 public interface PersonService
 {
-    void setPerson(Person p);
-    Person getPerson();
+    void setNombre(String nombre);
+    void setPoblacion(String poblacion);
+    void setEdad(int edad);
+    String getNombre();
+    String getPoblacion();
+    int getEdad();
 }
